@@ -195,12 +195,13 @@ function OptanonWrapper() { }
         background-position: center 55%;
     }
 
-    .hero-bg::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, rgba(230,0,0,0.2) 0%, rgba(0,0,0,0) 60%);
-    }
+   .hero-bg::before {
+  background: linear-gradient(
+    135deg,
+    rgba(231,72,47,0.3) 0%,   /* matches the banner color */
+    rgba(0,0,0,0) 60%
+  );
+}
 
     .hero-overlay {
         position: absolute;
