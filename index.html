@@ -21,7 +21,7 @@ function OptanonWrapper() { }
         -webkit-font-smoothing: antialiased;
     }
 
-    :root {
+   :root {
   --vf-red: #e7482f;        /* HD+ orange-red */
   --vf-red-dark: #c63c27;
 
@@ -34,7 +34,6 @@ function OptanonWrapper() { }
 
   --vf-border: rgba(255,255,255,0.08);
 }
-
     html, body {
         background: var(--vf-black);
         color: var(--vf-text);
@@ -195,13 +194,12 @@ function OptanonWrapper() { }
         background-position: center 55%;
     }
 
-   .hero-bg::before {
-  background: linear-gradient(
-    135deg,
-    rgba(231,72,47,0.3) 0%,   /* matches the banner color */
-    rgba(0,0,0,0) 60%
-  );
-}
+    .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(230,0,0,0.2) 0%, rgba(0,0,0,0) 60%);
+    }
 
     .hero-overlay {
         position: absolute;
@@ -697,8 +695,9 @@ function OptanonWrapper() { }
     <header class="top-bar">
         <div class="top-bar-inner">
             <a href="index.html" class="logo-link">
-                <img class="vodafone-logo" src=images/hdplus-logo.png
-<div class="brand-subtitle">HD+ TV</div>
+                <img class="vodafone-logo" src="images/hdplus-logo.png" alt="Vodafone">
+                <div class="brand-divider"></div>
+                <div class="brand-subtitle">HD+ TV</div>
             </a>
            
         <nav class="main-nav">
@@ -1261,7 +1260,7 @@ function OptanonWrapper() { }
         <a href="#">Senderübersicht</a>
     </div>
     <div class="footer-legal">
-        <div>© 2026 HD PLUS GmbH. Alle Rechte vorbehalten.</div>
+        <<div>© 2026 HD PLUS GmbH. Alle Rechte vorbehalten.</div>
 <div>HD+ – Fernsehen in brillanter Qualität.</div>
     </div>
 </footer>
